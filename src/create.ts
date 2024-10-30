@@ -1,4 +1,4 @@
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient, UserRole } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
@@ -25,6 +25,46 @@ const main = async () => {
   //     ],
   //   });
   //   console.log({ createMany });
+  // const createUser = await prisma.user.create({
+  //   data: {
+  //     username: "Gandib3",
+  //     email: "gandib3@gmail.com",
+  //     role: UserRole.user,
+  //   },
+  // });
+  // const createProfile = await prisma.profile.create({
+  //   data: {
+  //     bio: "This is bio...",
+  //     userId: 3,
+  //   },
+  // });
+  // const createCategory = await prisma.category.create({
+  //   data: {
+  //     name: "Programming",
+  //   },
+  // });
+  // const createPost = await prisma.post.create({
+  //   data: {
+  //     title: "This is title",
+  //     content: "This is content",
+  //     authorId: 1,
+  //     postCategory: {
+  //       create: [{ categoryId: 1 }, { categoryId: 3 }],
+  //       // create: {
+  //       //   categoryId: 3,
+  //       //   // category: {
+  //       //   //   connect: {
+  //       //   //     id: 1,
+  //       //   //   },
+  //       //   // },
+  //       // },
+  //     },
+  //   },
+  //   include: {
+  //     postCategory: true,
+  //   },
+  // });
+  // console.log(createPost);
 };
 
 main();
